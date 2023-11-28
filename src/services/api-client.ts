@@ -8,7 +8,7 @@ export interface FetchResponse<T> {
 }
 
 const axiosInstance = axios.create({
-  baseURL: "https://api.themoviedb.org/3/movie",
+  baseURL: "https://api.themoviedb.org/3/",
   params: {
     api_key: "cab4630aec2578cb97c8176e269db357",
   },
@@ -27,3 +27,5 @@ class APIClient<T> {
       .then((res) => res.data);
   };
 }
+
+export default APIClient;
